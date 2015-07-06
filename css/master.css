@@ -501,14 +501,14 @@ div#menu-contact.menu-active {
 }
 
 /* Contact */
-#gmap-container {
+#bmap-container {
 	padding: 10px;
 	background: #fff;
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 	   -box-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 		    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
 }
-#gmap {
+#bmap {
 	width: 740px;
 	height: 300px;
 }
