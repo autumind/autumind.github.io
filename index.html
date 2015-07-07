@@ -46,7 +46,7 @@
             	<li class="menu-list"><div id="menu-intro" class="menu-icon menu-active">Intro</div><a href="#" class="menu-hover">介绍</a></li>
             	<li class="menu-list menu-click"><div id="menu-resume" class="menu-icon">Intro</div><a href="#" class="menu-hover">简历</a></li>
             	<li class="menu-list menu-click"><div id="menu-portfolio" class="menu-icon">Intro</div><a href="#" class="menu-hover">作品</a></li>
-            	<li class="menu-list menu-click"><div id="menu-contact" class="menu-icon">Intro</div><a href="#" class="menu-hover">联系</a></li>
+            	<li class="menu-list menu-click" onclick="load_disqus()"><div id="menu-contact" class="menu-icon">Intro</div><a href="#" class="menu-hover">联系</a></li>
             </ul>
 
             <!-- Slider -->
@@ -328,6 +328,7 @@
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
+function load_disuqs(){
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'autumind';
     
@@ -337,6 +338,7 @@
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
+}
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
                     
