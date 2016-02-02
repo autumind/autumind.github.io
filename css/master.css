@@ -228,7 +228,8 @@ p {
 }
 #header-inner {
 	height: 100px;
-	width: 544px;
+	/*width: 544px;*/
+	width: 408px;
 	margin: 0 auto;
 }
 
@@ -296,7 +297,8 @@ div#menu-contact.menu-active {
 }
 #menu-slider {
 	padding-top: 70px;
-	width: 408px;
+	width: 306px;
+/*	width: 408px; */
 	margin: 0 auto;
 }
 #menu-slider-container {
