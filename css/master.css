@@ -39,14 +39,14 @@ h2 {
 }
 h3 {
 	font-size: 14px;
-	font-family: Helvetica, Arial;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	font-weight: bold;
 	color: #373737;
 	margin-bottom: 5px;
 }
 h4 {
 	font-size: 12px;
-	font-family: Helvetica, Arial;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	font-weight: bold;
 	color: #373737;
 	line-height: 14px;
