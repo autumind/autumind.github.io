@@ -391,7 +391,7 @@ div#menu-contact.menu-active {
 }
 .resume-label {
 	font-size: 14px;
-	font-family: Helvetica, Arial;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	font-weight: bold;
 	color: #373737;
 	width: 30%;
@@ -545,7 +545,7 @@ div#menu-contact.menu-active {
 		    border-radius: 4px;
 }
 .input {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	font-size: 12px;
 	background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
@@ -573,7 +573,7 @@ label.error{
     height: 100px;
 }
 .btn {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	display: block;
 	padding: 5px 10px;
 	color: #FFFFFF;
