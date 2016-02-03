@@ -6,7 +6,7 @@
 ============================== */
 body {
 	background:url(../media/bg.jpg) repeat;
-	font-family: 'Reenie Beanie', arial, serif;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	font-size: 12px;
 	color: #575757;
 	overflow-x: hidden;
