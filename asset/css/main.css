@@ -1,0 +1,351 @@
+@import url(http://fonts.useso.com/css?family=Roboto|Raleway|Noto+Sans:400,400i,700,700i|Oswald:300,400,700);
+@import url(myfont/iconfont.css);
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+}
+
+body {
+  background: rgb(204,204,204); 
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+page {
+  background: white;
+  display: block;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+
+page[size="A4"] {  
+  max-width: 21cm;
+  max-height: 29.7cm; 
+  /*height: 29.7cm;*/
+}
+
+page[size="A4"][layout="portrait"] {
+  width: 29.7cm;
+  height: 21cm;  
+}
+
+page[size="A3"] {
+  width: 29.7cm;
+  height: 42cm;
+}
+
+page[size="A3"][layout="portrait"] {
+  width: 42cm;
+  height: 29.7cm;  
+}
+
+page[size="A5"] {
+  width: 14.8cm;
+  height: 21cm;
+}
+
+page[size="A5"][layout="portrait"] {
+  width: 21cm;
+  height: 14.8cm;  
+}
+
+#cv {
+	margin-top: 10px;
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+	/*padding: 1.6em;*/
+	/*border-radius: 1px;*/
+	/*width: 90%;*/
+	/*text-align: center;*/
+	/*box-shadow: 0 0 10px #555;*/
+	/*-webkit-box-shadow: 0 0 10px #555;*/
+}
+
+[class*="am-icon-institution"]::before {
+	font-family: 'iconfont' !important;
+	font-style: normal;
+	color: rgb(9, 148, 187);
+	content: "\e600";
+	font-size: 1.447rem;
+	vertical-align: middle;
+}
+
+.ch::before {
+	font-family: 'iconfont' !important;
+	font-style: normal;
+	color: rgb(9, 148, 187);
+	content: "\e600";
+	font-size: 1.447rem;
+	vertical-align: initial;
+}
+
+.left {
+	background-color: #e3e3e3;
+	height: 29.7cm;
+	padding-top: 4.5rem;
+	padding-bottom: 1.5rem;
+	padding-left: 3rem;
+}
+
+.right {
+	background-color: #b1b1b1;
+	height: 29.7cm;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.photoOut {
+	border-radius: 2px;
+	/*display: inline-block;
+	max-width: 100%;
+	height: auto;*/
+	margin-left: 12%;
+	margin-right: 12%;
+	margin-top: 2%;
+	margin-bottom: 5%;
+	padding: 2px;
+	line-height: 1.6;
+	background-color: rgb(197, 197, 197);;
+	border: 3px solid rgb(197, 197, 197);
+	/*border-radius: 0;*/
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.icon-doubleright:before { content: "\e600"; }
+
+.photoIn {
+	/*border-radius: 2px;*/
+	display: inline-block;
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	padding: 2px;
+	line-height: 1.6;
+	background-color: rgb(177, 177, 177);;
+	border: 3px solid rgb(177, 177, 177);
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.me-name {
+	font-family: 'Oswald', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-weight: 600;
+	font-size: 2.8rem;
+}
+
+.me-title {
+	font-family: 'Raleway', 'Consolas', "宋体";
+	color: rgb(9, 148, 187);
+	font-weight: 200;
+	font-size: 1.2em;
+
+}
+
+.me-title-en {
+	margin-top: -25px;
+}
+
+.me-title-ch {
+	margin-top: -20px;
+}
+
+.me-desc {
+	font-family: 'Raleway', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-size: 0.8em;
+	margin-top: -12px;
+	/*white-space: pre;*/
+}
+
+.quote {
+	font-family: 'Raleway', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-size: 0.8em;
+}
+
+hr {
+	height: 0;
+	border-top: 1.5px solid #949494;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	margin-top: 7.5px;
+	width: 105%;
+	margin-bottom: 0px;
+}
+
+dl {
+	width: 93%;
+}
+
+dl > hr {
+	width: 100%;
+}
+
+dt + dd {
+    margin-top: 0em;
+}
+
+[class*="am-icon-"]:last-child {
+	/*font-family: 'Oswald', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;;
+	font-weight: 400;
+	font-size: 1.8rem;*/
+}
+
+[class*="am-icon-"]>span {
+	font-family: 'Oswald', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-weight: 400;
+	font-size: 1.46rem;
+	vertical-align: middle;
+}
+
+
+.ch>span {
+	font-family: 'Oswald', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-weight: 600;
+	font-size: 1.46rem;
+	vertical-align: initial;
+}
+
+
+.m-cv-m-b-10 {
+	margin-bottom: -10px;
+}
+
+.m-cv-m-t-2 {
+	margin-top: -2px;
+}
+
+.p-cv-m-b-5 {
+	margin-bottom: 5px;
+}
+
+.p-cv-m-b-7 {
+	margin-bottom: 7px;
+}
+
+.p-cv-m-b-9 {
+	margin-bottom: 12px;
+	margin-block-end: 9px;
+}
+
+.p-cv-m-t-10 {
+   margin-top: 10px;
+}
+
+.duration {
+	font-family: 'Raleway', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-size: 70%;
+	color: rgb(75, 75, 75);
+}
+
+.m-cv-m-b-e-7 {
+	margin-bottom: -6px;
+	margin-block-end: -7px;
+}
+
+.item-name {
+	font-family: 'Raleway', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	color: rgb(9, 148, 187);
+	font-weight: 600;
+	font-size: 1.34rem;
+}
+
+.item-title {
+	font-family: 'Raleway', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-weight: 700;
+	font-size: 1.11rem;
+	margin-top: -17px;
+	margin-block-start: -20px;
+}
+
+.item-desc {
+	font-family: 'Raleway', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-size: 0.8em;
+	margin-top: -15px;
+	margin-bottom: 0px;
+}
+
+.fix-desc {
+	margin-bottom: 1.6rem;
+}
+
+.skill-set-name {
+	font-family: 'Raleway', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-weight: 500;
+	font-size: 1.32rem;
+}
+
+.skill-name {
+	font-family: 'Raleway', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-weight: 500;
+	font-size: 1.1rem;
+}
+
+/* 技能条 start */
+progress {
+	display: inline-block;
+	width: 100%;
+	height: 1.1rem;
+	border: 0px solid rgb(9, 148, 187);
+	background-color:#d0cecf;
+	color: rgb(9, 148, 187); /*IE10*/
+  vertical-align: super;
+}
+/*ie6-ie9*/
+progress ie {
+	display:block;
+	height: 100%;
+	background: rgb(9, 148, 187);
+}
+
+progress::-moz-progress-bar { background: rgb(9, 148, 187); }
+progress::-webkit-progress-bar { background: #d0cecf; }
+progress::-webkit-progress-value  { background: rgb(9, 148, 187); }
+/* 技能条 end */
+
+.strength {
+	font-family: 'Raleway', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-weight: 500;
+	font-size: 1.3rem;
+	color: rgb(9, 148, 187);
+}
+
+.contact-type {
+	font-family: 'Raleway', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-weight: 600;
+	color: rgb(9, 148, 187);
+	font-size: 1.18rem;
+}
+
+.contact_content {
+	font-family: 'Roboto', 'Consolas', "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+	font-weight: 500;
+	font-size: 1.15rem;
+}
+
+.am-icon-douban::before {
+	font-family: 'iconfont' !important;
+	font-style: normal;
+	content: "\e606";
+}
+
+.social-width {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.font-color-grey {
+	color: grey;
+}
+
+/*'Oswald', 'Consolas', "微软雅黑";*/
