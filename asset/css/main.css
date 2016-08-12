@@ -30,7 +30,7 @@ page {
 }
 
 page[size="A4"] {  
-  max-width: 21cm;
+  max-width: 23cm;
   max-height: 29.7cm; 
   /*height: 29.7cm;*/
 }
