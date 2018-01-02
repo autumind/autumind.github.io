@@ -146,15 +146,15 @@ var ch = {
 						name      : "地址",
 						icon      : "location-arrow",
 						siteOrNum : "江苏省南京市  " +
-						            "秦淮区 双乐园小区18栋81单元701室  " +
-						            "210004"
+						            "雨花区 西柿路11号3幢1单元301室  " +
+						            "210041"
 					}
 				],
 	social: [
 				{
 					name      : "主页",
 					icon      : "home",
-					siteOrNum : "http://www.iylyi.com"
+					siteOrNum : "http://nbsp.me"
 				},
 				{
 					name      : "GitHub",
@@ -164,7 +164,7 @@ var ch = {
 				{
 					name      : "SO",
 					icon      : "stack-overflow",
-					siteOrNum : "http://stackoverflow.com/users/5960800/jpg"
+					siteOrNum : "http://stackoverflow.com/users/5960800/blank"
 				},
 				{
 					name      : "微博",
