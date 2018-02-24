@@ -251,23 +251,27 @@
                     canvas: canvas, //自定义 canvas
                     // logging: true, //日志开关，便于查看html2canvas的内部执行流程
                     width: width, //dom 原始宽度
-                    height: height,
+                    height: height * 1.1,
                     ignoreElements: true,
                     useCORS: true, // 【重要】开启跨域配置
                     onclone: function (domCopy) {
                         let left = domCopy.querySelector(".left");
                         left.style.backgroundColor = 'inherit';
+                        left.className = 'am-u-sm-7 left main-height';
                         let right = domCopy.querySelector(".right");
                         right.style.backgroundColor = 'inherit';
-                        // let itemDescList = domCopy.querySelectorAll(".item-desc");
-                        // itemDescList.forEach(item => {
-                        //     item.style.fontSize = '1em';
-                        // })
+                        right.className = 'am-u-sm-5 right main-height';
+                        let itemDescList = domCopy.querySelectorAll(".me-desc");
+                        itemDescList.forEach(item => {
+                            item.style.fontSize = '1em';
+                        });
+                        let quote = domCopy.querySelector(".quote");
+                        quote.style.fontSize = '0.9em';
 
-                        // let mainHeights = domCopy.querySelectorAll(".main-height");
-                        // mainHeights.forEach(mainHeight => {
-                        //     mainHeight.style.height = "100%";
-                        // });
+                        let mainHeights = domCopy.querySelectorAll(".main-height");
+                        mainHeights.forEach(mainHeight => {
+                            mainHeight.style.height = "100%";
+                        });
                     }
                 };
                 html2canvas(shareContent, opts)
@@ -278,7 +282,10 @@
                         context.webkitImageSmoothingEnabled = false;
                         context.msImageSmoothingEnabled = false;
                         context.imageSmoothingEnabled = false;
-                        printJS(Canvas2Image.convertToPNG(canvas, canvas.width, canvas.height).src, 'image');
+                        printJS({
+                            printable: Canvas2Image.convertToPNG(canvas, canvas.width, canvas.height).src,
+                            type: 'image',
+                            honorMarginPadding: false});
                     });
 
                 // domtoimage.toJpeg(shareContent)
