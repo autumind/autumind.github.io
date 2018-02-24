@@ -251,7 +251,7 @@
                     canvas: canvas, //自定义 canvas
                     // logging: true, //日志开关，便于查看html2canvas的内部执行流程
                     width: width, //dom 原始宽度
-                    height: height * 0.9,
+                    height: height,
                     ignoreElements: true,
                     useCORS: true, // 【重要】开启跨域配置
                     onclone: function (domCopy) {
