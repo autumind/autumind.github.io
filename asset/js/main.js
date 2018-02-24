@@ -39,7 +39,7 @@
             return (
                 <div>
                     <ItemTitle name={lang === 'en' ? 'JOB EXPERIENCE' : '工作经验'}/>
-                    <hr/>
+                    <hr data-html2canvas-ignore/>
                     {
                         profile.job.map(function (job) {
                             return (
@@ -70,7 +70,7 @@
             return (
                 <div>
                     <ItemTitle className="am-margin-top" name={lang === 'en' ? 'EDUCATION' : '教育经历'}/>
-                    <hr/>
+                    <hr data-html2canvas-ignore/>
                     {
                         profile.edu.map(function (edu) {
                             return (
@@ -117,7 +117,10 @@
                                                                     {s.name}
                                                                 </div>
                                                                 <div className="am-u-sm-8 m-cv-m-b-10">
-                                                                    <progress value={s.percent} max="100"/>
+                                                                    {/*<progress value={s.percent} max="100"/>*/}
+                                                                    <div className="am-progress progress">
+                                                                        <div className="am-progress-bar progress-bar" style={{width: s.percent + '%'}}/>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </dd>
@@ -130,7 +133,9 @@
                                                                     <dfn title={s.level}>{s.name}</dfn>
                                                                 </div>
                                                                 <div className="am-u-sm-8 m-cv-m-b-10">
-                                                                    <progress value={s.percent} max="100"/>
+                                                                    <div className="am-progress progress">
+                                                                        <div className="am-progress-bar progress-bar" style={{width: s.percent + '%'}}/>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </dd>
@@ -231,16 +236,70 @@
     // 简历组件
     var Cv = React.createClass({
         render: function () {
+            function printCv(e) {
+                e.preventDefault();
+                var shareContent = document.getElementById('cv');//需要截图的包裹的（原生的）DOM 对象
+                var width = shareContent.offsetWidth; //获取dom 宽度
+                var height = shareContent.offsetHeight; //获取dom 高度
+                var canvas = document.createElement("canvas"); //创建一个canvas节点
+                var scale = 2; //定义任意放大倍数 支持小数
+                canvas.width = width * scale; //定义canvas 宽度 * 缩放
+                canvas.height = height * scale; //定义canvas高度 *缩放
+                canvas.getContext("2d").scale(scale, scale); //获取context,设置scale
+                var opts = {
+                    scale: scale, // 添加的scale 参数
+                    canvas: canvas, //自定义 canvas
+                    // logging: true, //日志开关，便于查看html2canvas的内部执行流程
+                    width: width, //dom 原始宽度
+                    height: height * 0.9,
+                    ignoreElements: true,
+                    useCORS: true, // 【重要】开启跨域配置
+                    onclone: function (domCopy) {
+                        let left = domCopy.querySelector(".left");
+                        left.style.backgroundColor = 'inherit';
+                        let right = domCopy.querySelector(".right");
+                        right.style.backgroundColor = 'inherit';
+                        // let itemDescList = domCopy.querySelectorAll(".item-desc");
+                        // itemDescList.forEach(item => {
+                        //     item.style.fontSize = '1em';
+                        // })
+
+                        // let mainHeights = domCopy.querySelectorAll(".main-height");
+                        // mainHeights.forEach(mainHeight => {
+                        //     mainHeight.style.height = "100%";
+                        // });
+                    }
+                };
+                html2canvas(shareContent, opts)
+                    .then(function (canvas) {
+                        var context = canvas.getContext('2d');
+                        // 【重要】关闭抗锯齿
+                        context.mozImageSmoothingEnabled = false;
+                        context.webkitImageSmoothingEnabled = false;
+                        context.msImageSmoothingEnabled = false;
+                        context.imageSmoothingEnabled = false;
+                        printJS(Canvas2Image.convertToPNG(canvas, canvas.width, canvas.height).src, 'image');
+                    });
+
+                // domtoimage.toJpeg(shareContent)
+                //     .then(function (imageUrl) {
+                //         printJS(imageUrl, 'image');
+                //     });
+            }
+
             return (
                 <div className="main">
-                    <div className="am-u-sm-8 left">
+                    <div className={"amz-toolbar"} data-html2canvas-ignore>
+                        <a id={"printBtn"} onClick={printCv} href="#" className={"print-btn am-icon-btn am-icon-print"} title={"点击打印"}/>
+                    </div>
+                    <div className="am-u-sm-8 left main-height">
                         <Me name={profile.name} title={profile.title} desc={profile.desc} quote={profile.quote}/>
                         <Job/>
                         {/*<ItemTitle className="am-icon-institution" name="JOB EXPERIENCE"/>*/}
                         <Edu/>
                         {/*<ItemTitle className="am-icon-institution" name="EDUCATION"/>*/}
                     </div>
-                    <div className="am-u-sm-4 right">
+                    <div className="am-u-sm-4 right main-height">
                         <Photo src={base64_photo}/>
                         {/*<Photo src={"http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/1000/h/1000/q/80"}/>*/}
                         <Social/>
