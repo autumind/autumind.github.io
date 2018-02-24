@@ -383,7 +383,7 @@ progress::-webkit-progress-value {
 
 .amz-toolbar {
     position: fixed;
-    right: 400px;
+    /*right: 30%;*/
     bottom: 70px;
     z-index: 999
 }

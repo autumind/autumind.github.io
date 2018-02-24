@@ -294,9 +294,15 @@
                 //     });
             }
 
+            let page = document.querySelector("page");
+            // 监听窗口大小变化时间，控制打印按钮位置
+            window.addEventListener("resize", function () {
+                let toolbar = document.querySelector(".amz-toolbar");
+                toolbar.style.right = page.offsetLeft + 30 + "px";
+            });
             return (
                 <div className="main">
-                    <div className={"amz-toolbar"} data-html2canvas-ignore>
+                    <div className={"amz-toolbar"} data-html2canvas-ignore style={{right: page.offsetLeft + 30 + "px"}}>
                         <a id={"printBtn"} onClick={printCv} href="#" className={"print-btn am-icon-btn am-icon-print"} title={"点击打印"}/>
                     </div>
                     <div className="am-u-sm-8 left main-height">
