@@ -8,6 +8,7 @@
             return (
                 <div className="me">
                     <h1 className="am-article-title me-name">{this.props.name}</h1>
+                    <br/>
                     <p className={"am-article-meta me-title me-title-" + lang}>{this.props.title}</p>
                     <p dangerouslySetInnerHTML={{__html: this.props.desc}}>
                     </p>
