@@ -150,7 +150,7 @@ page[size="A5"][layout="portrait"] {
     color: rgb(9, 148, 187);
     font-weight: 200;
     font-size: 1.2em;
-
+    padding-top: 0.5em;
 }
 
 .me-title-en {
@@ -163,7 +163,7 @@ page[size="A5"][layout="portrait"] {
 
 .me-desc {
     font-family: 'Raleway', 'Consolas', "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-top: -12px;
     text-indent: 2em;
     /*white-space: pre;*/
